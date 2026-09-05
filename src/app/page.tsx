@@ -76,7 +76,7 @@ export default async function DashboardPage() {
                       </div>
                     </div>
                     <Badge variant={task.status === 'completed' ? 'default' : 'secondary'} className={task.status === 'completed' ? 'bg-green-500/10 text-green-500 hover:bg-green-500/20' : ''}>
-                      {task.status.replace('_', ' ')}
+                      {task.status?.replace('_', ' ') || 'Todo'}
                     </Badge>
                   </div>
                 ))}
