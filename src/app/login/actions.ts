@@ -17,6 +17,9 @@ export async function login(formData: FormData) {
   const { error } = await supabase.auth.signInWithPassword(data)
 
   if (error) {
+    if (error.message.includes('Invalid login credentials')) {
+      return { error: 'Invalid email or password. Did you sign up first?' }
+    }
     return { error: error.message }
   }
 

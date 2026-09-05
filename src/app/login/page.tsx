@@ -11,6 +11,7 @@ export default function LoginPage() {
               src="/logo.jpg"
               alt="AlphaTasks Logo"
               fill
+              sizes="(max-width: 768px) 96px, 128px"
               className="object-contain rounded-xl shadow-2xl shadow-primary/20"
               priority
             />
